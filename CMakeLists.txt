@@ -20,4 +20,4 @@ install(TARGETS openmesh_structures EXPORT openmesh_structures-targets)
 
 install(EXPORT openmesh_structures-targets FILE openmesh_structuresTargets.cmake DESTINATION ${CMAKE_INSTALL_PREFIX})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/openmesh_structuresConfig.cmake DESTINATION ${CMAKE_INSTALL_PREFIX})
-install(DIRECTORY ./ DESTINATION include FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY ./ DESTINATION include FILES_MATCHING PATTERN "*.h" PATTERN ".git" EXCLUDE)
